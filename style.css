@@ -16,6 +16,7 @@
     --accent-indigo: #3538CD;
     --gradient-start: #77B4D8;
     --gradient-end: #BAE0A3;
+    --header-bg: rgba(255,255,255,0.8);
     
     /* Spacing */
     --section-padding: 100px 5%;
@@ -136,10 +137,10 @@ section {
 }
 
 .session-card .number {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--accent-blue);
-    margin-bottom: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--gradient-start);
+    margin-bottom: 8px;
     display: block;
 }
 
@@ -156,22 +157,59 @@ section {
 /* Responsive */
 @media (max-width: 768px) {
     :root {
-        --section-padding: 60px 5%;
+        --section-padding: 50px 20px;
     }
     
+    .hero {
+        height: auto;
+        padding: 100px 20px;
+    }
+
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        line-height: 1.2;
     }
     
+    .hero p {
+        font-size: 1rem !important;
+        margin-bottom: 30px !important;
+    }
+
+    h2 {
+        font-size: 1.8rem !important;
+    }
+
     .container {
-        padding: 0 20px;
+        padding: 0;
     }
     
     .logo {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
+    header nav {
+        padding: 15px 20px !important;
+    }
+
     .nav-links {
-        display: none; /* Mobile menu can be added if needed, for now keeping it simple */
+        display: none;
+    }
+
+    .sessions-grid {
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .session-card {
+        padding: 20px;
+    }
+
+    #instructor {
+        padding: 60px 20px !important;
+        gap: 40px !important;
+    }
+
+    #instructor h2 {
+        font-size: 2.2rem !important;
     }
 }

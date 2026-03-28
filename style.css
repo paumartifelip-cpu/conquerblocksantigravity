@@ -1,0 +1,154 @@
+/* 
+   Conquerblocks Design System 
+   Focus: Premium, Tech-Driven, High-Contrast
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap');
+
+:root {
+    /* Colors */
+    --primary-bg: #FFFFFF;
+    --dark-bg: #111111;
+    --dark-accent: #1D1D1D;
+    --text-dark: #1D1D1D;
+    --text-light: #FFFFFF;
+    --accent-blue: #7F56D9;
+    --accent-indigo: #3538CD;
+    --gradient-start: #77B4D8;
+    --gradient-end: #BAE0A3;
+    
+    /* Spacing */
+    --section-padding: 100px 5%;
+    --card-radius: 12px;
+    
+    /* Typography */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--primary-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+/* Utils */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    color: var(--text-dark);
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(119, 180, 216, 0.3);
+}
+
+/* Sections */
+section {
+    padding: var(--section-padding);
+}
+
+.dark-section {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+}
+
+/* Hero */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--dark-bg) 0%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    display: none; /* Removed background photo */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    color: var(--text-light); /* Fixed contrast */
+}
+
+/* Session Cards */
+.sessions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.session-card {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 30px;
+    border-radius: var(--card-radius);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.session-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    border-color: var(--gradient-start);
+}
+
+.session-card .number {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.session-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.session-card p {
+    color: #6B7280;
+    font-size: 0.95rem;
+}

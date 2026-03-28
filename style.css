@@ -50,6 +50,7 @@ h1, h2, h3, h4 {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 40px;
 }
 
 .gradient-text {
@@ -113,6 +114,30 @@ section {
     color: var(--text-light); /* Fixed contrast */
 }
 
+/* Sections */
+.intro-manifesto {
+    padding: 120px 40px;
+    background: #fdfdfd;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.intro-manifesto h2 {
+    font-size: 3rem;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    line-height: 1.2;
+}
+
+.intro-manifesto p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+    line-height: 1.8;
+}
+
 /* Session Cards */
 .sessions-grid {
     display: grid;
@@ -158,6 +183,22 @@ section {
 @media (max-width: 768px) {
     :root {
         --section-padding: 50px 20px;
+    }
+    
+    .container {
+        padding: 0 20px;
+    }
+
+    .intro-manifesto {
+        padding: 80px 20px;
+    }
+
+    .intro-manifesto h2 {
+        font-size: 2rem;
+    }
+
+    .intro-manifesto p {
+        font-size: 1.1rem;
     }
     
     .hero {
